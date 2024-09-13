@@ -16,7 +16,7 @@ jobs:
 
       # Gera a cobra de contribuições
       - name: Generate Snake
-        uses: Platane/snk@v2.1.0
+        uses: Platane/snk@v2.2.0
         with:
           github_user_name: viniciusbarbosa2024  # substitua pelo seu nome de usuário
           outputs: dist/snake.svg
