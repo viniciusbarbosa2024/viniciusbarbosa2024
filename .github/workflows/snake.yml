@@ -2,8 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    # executa o workflow diariamente
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # Executa uma vez por dia
   workflow_dispatch:
 
 jobs:
@@ -11,24 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Faz o checkout do repositório
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3  # Atualizado para v3
 
-      # Gera a cobra de contribuições
       - name: Generate Snake
-        uses: Platane/snk@v2.2.0
+        uses: Platane/snk@v2.2.0  # Atualizado para a última versão
         with:
-          github_user_name: viniciusbarbosa2024  # substitua pelo seu nome de usuário
+          github_user_name: viniciusbarbosa2024
           outputs: dist/snake.svg
 
-      # Faz o commit da cobra gerada
       - name: Commit & Push Snake Grid
         uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
           build_dir: dist
 
-      # Atualiza o arquivo README.md
       - name: Atualizar o README
         run: |
           git config --local user.email "action@github.com"
