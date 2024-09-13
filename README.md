@@ -38,7 +38,6 @@
 
 <br clear="both">
 
-![GitHub Contribution Snake](https://github.com/viniciusbarbosa2024/viniciusbarbosa2024/blob/output/github-contribution-grid-snake.svg)
 
 
 
